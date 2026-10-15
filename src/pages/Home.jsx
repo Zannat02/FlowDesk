@@ -9,6 +9,7 @@ import Features from '../components/sections/Features'
 import WhyChooseUs from '../components/sections/WhyChooseUs'
 import Pricing from '../components/sections/Pricing'
 import Integrations from '../components/sections/Integrations'
+import Footer from '../components/layout/Footer'
 
 export default function Home() {
   return (
@@ -35,6 +36,7 @@ export default function Home() {
          <WhyChooseUs />
           <Pricing />
           <Integrations />
+                  <Footer />
       </div>
     </div>
   )

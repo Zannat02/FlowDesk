@@ -30,7 +30,7 @@ const icons = [
 
 export default function Integrations() {
   return (
-    <section className="px-3 pb-10 pt-20 sm:px-6 md:pb-20 md:pt-34 lg:px-10">
+    <section className="px-3 pt-20 sm:px-6 md:pt-34 lg:px-10">
       <div className="overflow-hidden rounded-3xl border border-line bg-gradient-to-b from-surface-2 to-surface px-4 py-10 shadow-soft sm:px-8 lg:py-14">
         <div className="relative mx-auto max-w-xl px-6 py-28 md:py-36 lg:flex lg:min-h-[460px] lg:max-w-none lg:items-center lg:justify-center lg:py-0">
           {rings.map((ring, i) => (
