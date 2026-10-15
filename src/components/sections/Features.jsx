@@ -5,9 +5,11 @@ import TasksPreview from '../features/TasksPreview'
 import ExploreCard from '../features/ExploreCard'
 
 
+
 export default function Features() {
+ 
   return (
-    <section className="px-3 pt-12 sm:px-6 md:pt-24 lg:px-10">
+    <section className="px-3 pt-20 sm:px-6 md:pt-34 lg:px-10">
       <div className="grid grid-cols-1 items-center gap-8 lg:grid-cols-2 lg:gap-12">
      
         <div className="order-2 lg:order-1">

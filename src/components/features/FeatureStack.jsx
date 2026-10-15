@@ -1,4 +1,5 @@
 import { CheckCircle2, Users, BarChart3, KanbanSquare, Clock } from 'lucide-react'
+import { motion, useReducedMotion } from 'motion/react'
 import FeatureItem from './FeatureItem'
 
 const features = [
@@ -27,6 +28,7 @@ function GhostCard({ side }) {
 }
 
 export default function FeatureStack() {
+    const reduce = useReducedMotion()
     // list is rendered twice so the vertical loop is seamless
     const group = (key) => (
         <div key={key} aria-hidden={key === 'b'}>
@@ -51,12 +53,16 @@ export default function FeatureStack() {
             <span className="absolute left-[7%] top-[26%] h-5 w-5 rounded-full" style={sphere()} />
             <span className="absolute bottom-[34%] left-[6%] z-20 h-12 w-12 rounded-full" style={sphere()} />
 
-            {/* scrolling cards, faded at top and bottom */}
-            <div className="feature-mask absolute inset-x-0 top-0 h-[68%] overflow-hidden">
-                <div className="animate-rise mx-auto w-[72%] max-w-[340px] pt-4">
+            {/* scrolling cards */}
+            <div className="absolute inset-x-0 top-0 h-[68%] overflow-hidden [mask-image:linear-gradient(to_bottom,transparent_0,#000_24%,#000_68%,transparent_100%)]">
+                <motion.div
+                    className="mx-auto w-[72%] max-w-[340px] pt-4"
+                    animate={reduce ? undefined : { y: ['0%', '-50%'] }}
+                    transition={{ duration: 24, ease: 'linear', repeat: Infinity }}
+                >
                     {group('a')}
                     {group('b')}
-                </div>
+                </motion.div>
             </div>
 
             {/* cast shadow on the ground */}

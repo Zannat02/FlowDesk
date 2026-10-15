@@ -7,6 +7,8 @@ import WaveBackground from '../components/ui/WaveBackground'
 import TrustedBy from '../components/sections/TrustedBy'
 import Features from '../components/sections/Features'
 import WhyChooseUs from '../components/sections/WhyChooseUs'
+import Pricing from '../components/sections/Pricing'
+import Integrations from '../components/sections/Integrations'
 
 export default function Home() {
   return (
@@ -31,6 +33,8 @@ export default function Home() {
         <TrustedBy />
         <Features />
          <WhyChooseUs />
+          <Pricing />
+          <Integrations />
       </div>
     </div>
   )

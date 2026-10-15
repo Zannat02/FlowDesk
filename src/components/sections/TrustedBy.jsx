@@ -1,26 +1,27 @@
+
+import { useReducedMotion } from 'motion/react'
 import BrandLogo, { brands } from '../ui/BrandLogo'
+import MarqueeModule from 'react-fast-marquee'
+const Marquee = MarqueeModule.default ?? MarqueeModule
 
 export default function TrustedBy() {
-  
-  const group = (key) => (
-    <div key={key} className="flex shrink-0 items-center gap-12 pr-12 md:gap-16 md:pr-16" aria-hidden={key === 'b'}>
-      {brands.map((b) => (
-        <BrandLogo key={b.name} brand={b} />
-      ))}
-    </div>
-  )
+  const reduce = useReducedMotion()
 
   return (
-    <section className="px-3 pt-12 sm:px-6 md:pt-24 lg:px-10">
+    <section className="px-3 pt-20 sm:px-6 md:pt-34 lg:px-10">
       <p className="text-center text-sm text-ink-soft md:text-base">
         Trusted by teams at fast-growing companies
       </p>
 
-      <div className="marquee-mask mt-6 overflow-hidden md:mt-8">
-        <div className="animate-marquee flex w-max">
-          {group('a')}
-          {group('b')}
-        </div>
+      {/* the mask class fades both edges */}
+      <div className="mt-6 md:mt-8 [mask-image:linear-gradient(to_right,transparent,#000_14%,#000_86%,transparent)]">
+        <Marquee speed={40} autoFill play={!reduce}>
+          {brands.map((b) => (
+            <div key={b.name} className="mx-6 md:mx-8">
+              <BrandLogo brand={b} />
+            </div>
+          ))}
+        </Marquee>
       </div>
     </section>
   )

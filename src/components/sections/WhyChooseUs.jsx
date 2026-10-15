@@ -7,7 +7,7 @@ import WorkloadTable from '../dashboard/WorkloadTable'
 
 export default function WhyChooseUs() {
   return (
-    <section className="px-3 pb-10 pt-12 sm:px-6 md:pb-20 md:pt-24 lg:px-10">
+    <section className="px-3 pt-20 sm:px-6 md:pt-34 lg:px-10">
       <div className="flex flex-col items-center gap-5 text-center lg:gap-6">
         <Badge>Why Choose Us</Badge>
         <Heading as="h2" className="text-ink-soft">
