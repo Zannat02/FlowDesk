@@ -13,7 +13,7 @@ export default function TrustedBy() {
         Trusted by teams at fast-growing companies
       </p>
 
-      {/* the mask class fades both edges */}
+    
       <div className="mt-6 md:mt-8 [mask-image:linear-gradient(to_right,transparent,#000_14%,#000_86%,transparent)]">
         <Marquee speed={40} autoFill play={!reduce}>
           {brands.map((b) => (

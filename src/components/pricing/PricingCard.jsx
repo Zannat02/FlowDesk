@@ -1,7 +1,7 @@
 import { Check } from 'lucide-react'
 import Button from '../ui/Button'
 
-/* Reusable pricing card. `featured` highlights the recommended plan. */
+/* Reusable pricing card */
 export default function PricingCard({ plan }) {
   const { name, price, unit, description, cta, features, featured } = plan
 
